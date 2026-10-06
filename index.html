@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
+
+  <title>E-commerce Checkout Page</title>
+</head>
+
+<body>
+
+  <!-- PAGE BACKGROUND -->
+  <div class="min-h-screen w-full bg-[#edd9c2] px-4 py-6 sm:px-6 md:px-10 lg:px-16 xl:px-24">
+
+    <!-- MAIN WHITE CONTAINER -->
+    <section class="mx-auto max-w-7xl overflow-hidden rounded-xl bg-white shadow-sm">
+
+      <!-- NAVIGATION -->
+      <nav
+        class="flex flex-col gap-6 border-b border-gray-200 px-6 py-6
+               lg:flex-row lg:items-center lg:justify-between lg:px-10"
+      >
+
+        <!-- Navigation Links -->
+        <ul class="flex flex-wrap gap-5 sm:gap-8">
+
+          <li>
+            <a
+              href="#"
+              class="text-sm transition-colors hover:text-orange-500"
+            >
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#"
+              class="text-sm transition-colors hover:text-orange-500"
+            >
+              Product
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#"
+              class="text-sm transition-colors hover:text-orange-500"
+            >
+              Deals
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#"
+              class="text-sm transition-colors hover:text-orange-500"
+            >
+              Contact Us
+            </a>
+          </li>
+
+        </ul>
+
+
+        <!-- Logo -->
+        <h1 class="text-2xl font-bold sm:text-3xl">
+          Santa Store
+        </h1>
+
+
+        <!-- Search + Icons -->
+        <div class="flex items-center gap-4">
+
+          <!-- Search -->
+          <div class="relative">
+
+            <input
+              type="text"
+              placeholder="Search"
+              class="w-32 rounded-lg border border-gray-300 py-2 pl-9 pr-3
+                     text-sm outline-none transition focus:border-gray-500
+                     sm:w-40"
+            >
+
+            <i
+              class="fa-solid fa-magnifying-glass absolute left-3 top-1/2
+                     -translate-y-1/2 text-sm text-gray-500"
+            ></i>
+
+          </div>
+
+
+          <!-- Icons -->
+          <div class="flex items-center gap-4 text-lg">
+
+            <button
+              type="button"
+              aria-label="Shopping cart"
+              class="transition-colors hover:text-orange-500"
+            >
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+
+            <button
+              type="button"
+              aria-label="User account"
+              class="transition-colors hover:text-orange-500"
+            >
+              <i class="fa-solid fa-user"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+      </nav>
+
+
+      <!-- BREADCRUMB -->
+      <div class="border-b border-gray-200 px-6 py-5 lg:px-10">
+
+        <div class="flex items-center gap-3">
+
+          <a
+            href="#"
+            class="text-sm text-gray-500 transition-colors hover:text-black"
+          >
+            Shopping Cart
+          </a>
+
+          <i
+            class="fa-solid fa-arrow-right-long text-xs text-gray-400"
+          ></i>
+
+          <a
+            href="#"
+            class="text-sm font-semibold text-black"
+          >
+            Check Out
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- CHECKOUT GRID -->
+      <div class="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr]">
+
+        <!-- LEFT SIDE - CHECKOUT FORM -->
+        <main class="px-6 py-8 lg:border-r lg:border-gray-200 lg:px-10">
+
+          <!-- SHOPPING DETAILS -->
+          <section class="mb-8">
+
+            <h2 class="mb-4 text-xl font-semibold">
+              Shopping Details
+            </h2>
+
+            <div class="flex flex-col gap-4 sm:flex-row sm:gap-8">
+
+              <label class="flex cursor-pointer items-center gap-2">
+
+                <input
+                  type="radio"
+                  name="delivery-method"
+                  checked
+                  class="h-4 w-4 accent-orange-500"
+                >
+
+                <span class="text-sm">
+                  Delivery
+                </span>
+
+              </label>
+
+
+              <label class="flex cursor-pointer items-center gap-2">
+
+                <input
+                  type="radio"
+                  name="delivery-method"
+                  class="h-4 w-4 accent-orange-500"
+                >
+
+                <span class="text-sm">
+                  Pick Up From Store
+                </span>
+
+              </label>
+
+            </div>
+
+          </section>
+
+
+          <!-- EMAIL -->
+          <section class="mb-6">
+
+            <label class="mb-1 block text-sm text-gray-500">
+              E-mail
+            </label>
+
+            <input
+              type="email"
+              placeholder="Johndoe@example.com"
+              class="h-10 w-full rounded border border-gray-300 px-3
+                     text-sm outline-none transition focus:border-gray-500"
+            >
+
+          </section>
+
+
+          <!-- PHONE -->
+          <section class="mb-8">
+
+            <label class="mb-1 block text-sm text-gray-500">
+              Phone Number
+            </label>
+
+            <div class="relative">
+
+              <select
+                name="country-code"
+                aria-label="Country code"
+                class="absolute left-2 top-1/2 h-7 -translate-y-1/2
+                       border-none bg-transparent text-sm outline-none"
+              >
+                <option>🇷🇼</option>
+                <option>🇧🇮</option>
+                <option>🇰🇪</option>
+                <option>🇺🇬</option>
+                <option>🇹🇿</option>
+                <option>🇺🇸</option>
+                <option>🇬🇧</option>
+                <option>🇫🇷</option>
+              </select>
+
+              <input
+                type="tel"
+                placeholder="+250 788 000 000"
+                class="h-10 w-full rounded border border-gray-300
+                       pl-14 pr-3 text-sm outline-none transition
+                       focus:border-gray-500"
+              >
+
+            </div>
+
+          </section>
+
+
+          <!-- DELIVERY -->
+          <section class="mb-8">
+
+            <h2 class="mb-5 text-xl font-semibold">
+              Delivery
+            </h2>
+
+
+            <!-- First + Last Name -->
+            <div class="flex flex-col gap-5 md:flex-row">
+
+              <div class="w-full md:w-1/2">
+
+                <label class="mb-1 block text-sm text-gray-500">
+                  First Name
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="John"
+                  class="h-10 w-full rounded border border-gray-300
+                         px-3 text-sm outline-none transition
+                         focus:border-gray-500"
+                >
+
+              </div>
+
+
+              <div class="w-full md:w-1/2">
+
+                <label class="mb-1 block text-sm text-gray-500">
+                  Last Name
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="Doe"
+                  class="h-10 w-full rounded border border-gray-300
+                         px-3 text-sm outline-none transition
+                         focus:border-gray-500"
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- Country -->
+            <div class="mt-5">
+
+              <label class="mb-1 block text-sm text-gray-500">
+                Country
+              </label>
+
+              <div class="relative">
+
+                <select
+                  class="h-10 w-full appearance-none rounded
+                         border border-gray-300 bg-white px-3 pr-10
+                         text-sm outline-none transition
+                         focus:border-gray-500"
+                >
+
+                  <option value="">
+                    Select Country
+                  </option>
+
+                  <option>Rwanda</option>
+                  <option>Burundi</option>
+                  <option>Kenya</option>
+                  <option>Uganda</option>
+                  <option>Tanzania</option>
+                  <option>United States</option>
+                  <option>United Kingdom</option>
+                  <option>France</option>
+
+                </select>
+
+                <i
+                  class="fa-solid fa-chevron-down pointer-events-none
+                         absolute right-3 top-1/2 -translate-y-1/2
+                         text-xs text-gray-500"
+                ></i>
+
+              </div>
+
+            </div>
+
+
+            <!-- Address -->
+            <div class="mt-5">
+
+              <label class="mb-1 block text-sm text-gray-500">
+                Address
+              </label>
+
+              <input
+                type="text"
+                placeholder="Enter Address"
+                class="h-10 w-full rounded border border-gray-300
+                       px-3 text-sm outline-none transition
+                       focus:border-gray-500"
+              >
+
+            </div>
+
+
+            <!-- State / City / ZIP -->
+            <div class="mt-5 grid grid-cols-1 gap-5 md:grid-cols-3">
+
+              <div>
+
+                <label class="mb-1 block text-sm text-gray-500">
+                  State
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="Select option"
+                  class="h-10 w-full rounded border border-gray-300
+                         px-3 text-sm outline-none transition
+                         focus:border-gray-500"
+                >
+
+              </div>
+
+
+              <div>
+
+                <label class="mb-1 block text-sm text-gray-500">
+                  Town / City
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="Select option"
+                  class="h-10 w-full rounded border border-gray-300
+                         px-3 text-sm outline-none transition
+                         focus:border-gray-500"
+                >
+
+              </div>
+
+
+              <div>
+
+                <label class="mb-1 block text-sm text-gray-500">
+                  ZIP Code
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="Enter Zipcode"
+                  class="h-10 w-full rounded border border-gray-300
+                         px-3 text-sm outline-none transition
+                         focus:border-gray-500"
+                >
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <!-- PAYMENT METHOD -->
+          <section class="mb-10">
+
+            <h2 class="mb-4 text-xl font-semibold">
+              Payment Method
+            </h2>
+
+
+            <!-- Cash on Delivery -->
+            <div
+              class="mb-3 flex min-h-12 items-center justify-between
+                     rounded border border-gray-300 px-3 py-2"
+            >
+
+              <label class="flex cursor-pointer items-center gap-3">
+
+                <input
+                  type="radio"
+                  name="payment-method"
+                  class="h-4 w-4 accent-orange-500"
+                >
+
+                <span class="text-sm">
+                  Cash on Delivery
+                </span>
+
+              </label>
+
+              <img
+                class="h-8 w-10 object-contain"
+                src="images/images.png"
+                alt="Cash payment"
+              >
+
+            </div>
+
+
+            <!-- Credit / Debit Card -->
+            <div class="overflow-hidden rounded border border-gray-300">
+
+              <!-- Card Header -->
+              <div
+                class="flex flex-wrap items-center justify-between gap-3
+                       border-b border-gray-300 bg-gray-100 px-3 py-2"
+              >
+
+                <label class="flex cursor-pointer items-center gap-3">
+
+                  <input
+                    type="radio"
+                    name="payment-method"
+                    checked
+                    class="h-4 w-4 accent-orange-500"
+                  >
+
+                  <span class="text-sm">
+                    Credit / Debit Card
+                  </span>
+
+                </label>
+
+
+                <!-- Payment Logos -->
+                <div class="flex items-center gap-2">
+
+                  <img
+                    class="h-7 w-10 object-contain"
+                    src="images/visa.jpeg"
+                    alt="Visa"
+                  >
+
+                  <img
+                    class="h-7 w-10 object-contain"
+                    src="images/Mastercard_2019_logo.svg"
+                    alt="Mastercard"
+                  >
+
+                  <img
+                    class="h-7 w-10 object-contain"
+                    src="images/Discover_card.jpeg"
+                    alt="Discover"
+                  >
+
+                  <img
+                    class="h-7 w-10 object-contain"
+                    src="images/stripe.jpeg"
+                    alt="Stripe"
+                  >
+
+                </div>
+
+              </div>
+
+
+              <!-- Card Details -->
+              <div class="space-y-5 bg-gray-100 p-4">
+
+                <!-- Card Number -->
+                <div>
+
+                  <label class="mb-1 block text-sm text-gray-500">
+                    Card Number
+                  </label>
+
+                  <div class="relative">
+
+                    <input
+                      type="text"
+                      placeholder="1234 5678 9012 3456"
+                      class="h-10 w-full rounded border border-gray-300
+                             bg-white px-3 pr-16 text-sm outline-none
+                             transition focus:border-gray-500"
+                    >
+
+                    <img
+                      class="absolute right-3 top-1/2 h-8 w-10
+                             -translate-y-1/2 object-contain"
+                      src="images/Mastercard_2019_logo.svg"
+                      alt="Mastercard"
+                    >
+
+                  </div>
+
+                </div>
+
+
+                <!-- Expiry + CVV -->
+                <div class="grid grid-cols-1 gap-5 sm:grid-cols-[2fr_1fr]">
+
+                  <div>
+
+                    <label class="mb-1 block text-sm text-gray-500">
+                      Expiry Date
+                    </label>
+
+                    <input
+                      type="text"
+                      placeholder="MM / YY"
+                      class="h-10 w-full rounded border border-gray-300
+                             bg-white px-3 text-sm outline-none
+                             transition focus:border-gray-500"
+                    >
+
+                  </div>
+
+
+                  <div>
+
+                    <label class="mb-1 block text-sm text-gray-500">
+                      CVV
+                    </label>
+
+                    <input
+                      type="text"
+                      placeholder="123"
+                      class="h-10 w-full rounded border border-gray-300
+                             bg-white px-3 text-sm outline-none
+                             transition focus:border-gray-500"
+                    >
+
+                  </div>
+
+                </div>
+
+
+                <!-- Save Card -->
+                <div class="flex items-center gap-2">
+
+                  <input
+                    type="checkbox"
+                    id="save-card"
+                    class="h-4 w-4 accent-orange-500"
+                  >
+
+                  <label
+                    for="save-card"
+                    class="cursor-pointer text-sm text-gray-700"
+                  >
+                    Save card for next time order
+                  </label>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- Apple Pay -->
+            <div class="mt-4 rounded border border-gray-300">
+
+              <label
+                class="flex cursor-pointer items-center gap-3 px-5 py-2"
+              >
+
+                <input
+                  type="radio"
+                  name="payment-method"
+                  class="h-4 w-4 accent-orange-500"
+                >
+
+                <span class="text-sm">
+                  Apple Pay
+                </span>
+
+                <img
+                  class="ml-auto h-11 w-14 object-contain"
+                  src="images/applepay.png"
+                  alt="Apple Pay"
+                >
+
+              </label>
+
+            </div>
+
+          </section>
+
+
+          <!-- ADDITIONAL INFORMATION -->
+          <section class="mb-8">
+
+            <h2 class="text-xl font-semibold">
+              Additional Information
+            </h2>
+
+            <div class="mt-3">
+
+              <label class="mb-2 block text-sm text-gray-700">
+                Order Notes
+                <span class="text-gray-400">
+                  (Optional)
+                </span>
+              </label>
+
+              <textarea
+                placeholder="Note about your order, e.g. Special notes for delivery."
+                class="min-h-24 w-full resize-none rounded-lg
+                       border border-gray-300 p-3 text-sm text-gray-600
+                       outline-none transition focus:border-gray-500
+                       focus:ring-2 focus:ring-gray-200"
+              ></textarea>
+
+            </div>
+
+          </section>
+
+
+          <!-- COMPLETE ORDER -->
+          <button
+            type="button"
+            class="w-full rounded-lg bg-orange-500 py-3
+                   font-semibold text-white transition
+                   hover:bg-orange-600 active:scale-[0.99]"
+          >
+            Complete Order →
+          </button>
+
+        </main>
+
+
+        <!-- RIGHT SIDE - ORDER SUMMARY -->
+        <aside class="bg-gray-50 px-6 py-8 lg:px-8">
+
+          <h2 class="mb-6 text-xl font-semibold">
+            Order Summary
+          </h2>
+
+
+          <!-- PRODUCT 1 -->
+          <div class="flex gap-4 border-b border-gray-200 pb-6">
+
+            <!-- Product Image -->
+            <div
+              class="h-24 w-24 shrink-0 overflow-hidden rounded-lg bg-white"
+            >
+
+              <img
+                src="images/flower.avif"
+                alt="Large flower earrings"
+                class="h-full w-full object-cover"
+              >
+
+            </div>
+
+
+            <!-- Product Details -->
+            <div class="flex min-w-0 flex-1 flex-col">
+
+              <h3 class="font-semibold">
+                Large Flower Earrings
+              </h3>
+
+              <p class="mt-1 text-sm text-gray-500">
+                Product description
+              </p>
+
+
+              <!-- Quantity + Price -->
+              <div class="mt-3 flex items-center justify-between gap-3">
+
+                <!-- Quantity -->
+                <div class="flex items-center">
+
+                  <button
+                    type="button"
+                    aria-label="Decrease quantity"
+                    class="flex h-8 w-8 items-center justify-center
+                           border border-gray-200 text-gray-500
+                           transition hover:bg-gray-100"
+                  >
+                    −
+                  </button>
+
+                  <span
+                    class="flex h-8 w-8 items-center justify-center
+                           bg-white text-sm font-medium"
+                  >
+                    2
+                  </span>
+
+                  <button
+                    type="button"
+                    aria-label="Increase quantity"
+                    class="flex h-8 w-8 items-center justify-center
+                           border border-gray-200 text-gray-500
+                           transition hover:bg-gray-100"
+                  >
+                    +
+                  </button>
+
+                </div>
+
+
+                <!-- Price -->
+                <span class="font-semibold">
+                  $40.00
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- PRODUCT 2 -->
+          <div class="flex gap-4 border-b border-gray-200 py-6">
+
+            <!-- Product Image -->
+            <div
+              class="h-24 w-24 shrink-0 overflow-hidden rounded-lg bg-white"
+            >
+
+              <img
+                src="images/flower_2.jpeg"
+                alt="Christmas gift set"
+                class="h-full w-full object-cover"
+              >
+
+            </div>
+
+
+            <!-- Product Details -->
+            <div class="flex min-w-0 flex-1 flex-col">
+
+              <h3 class="font-semibold">
+                Christmas Gift Set
+              </h3>
+
+              <p class="mt-1 text-sm text-gray-500">
+                Product description
+              </p>
+
+
+              <!-- Quantity + Price -->
+              <div class="mt-3 flex items-center justify-between gap-3">
+
+                <!-- Quantity -->
+                <div class="flex items-center">
+
+                  <button
+                    type="button"
+                    aria-label="Decrease quantity"
+                    class="flex h-8 w-8 items-center justify-center
+                           border border-gray-200 text-gray-500
+                           transition hover:bg-gray-100"
+                  >
+                    −
+                  </button>
+
+                  <span
+                    class="flex h-8 w-8 items-center justify-center
+                           bg-white text-sm font-medium"
+                  >
+                    2
+                  </span>
+
+                  <button
+                    type="button"
+                    aria-label="Increase quantity"
+                    class="flex h-8 w-8 items-center justify-center
+                           border border-gray-200 text-gray-500
+                           transition hover:bg-gray-100"
+                  >
+                    +
+                  </button>
+
+                </div>
+
+
+                <!-- Price -->
+                <span class="font-semibold">
+                  -$5.00
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- ORDER TOTALS -->
+          <div class="space-y-4 border-b border-gray-200 py-6">
+
+            <div class="flex justify-between text-sm">
+
+              <span class="text-gray-500">
+                Sub-total
+              </span>
+
+              <span>
+                $40.00
+              </span>
+
+            </div>
+
+
+            <div class="flex justify-between text-sm">
+
+              <span class="text-gray-500">
+                Discount
+              </span>
+
+              <span>
+                -$5.00
+              </span>
+
+            </div>
+
+
+            <div class="flex justify-between text-sm">
+
+              <span class="text-gray-500">
+                Shipping fee
+              </span>
+
+              <span>
+                Free
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- TOTAL -->
+          <div class="flex items-center justify-between border-b
+                      border-gray-300 py-6">
+
+            <span class="text-lg font-semibold">
+              Total
+            </span>
+
+            <span class="text-xl font-bold">
+              $35.00
+            </span>
+
+          </div>
+
+
+          <!-- REMEMBER CHECKOUT -->
+          <div class="mt-5">
+
+            <label class="flex cursor-pointer items-start gap-3">
+
+              <input
+                type="checkbox"
+                class="mt-1 h-4 w-4 shrink-0 accent-orange-500"
+              >
+
+              <span class="text-sm leading-5 text-gray-400">
+                Remember all information for checkout next time.
+              </span>
+
+            </label>
+
+          </div>
+
+
+          <!-- ESTIMATED DELIVERY -->
+          <div class="mt-6">
+
+            <h2 class="text-lg font-semibold">
+              Estimated Delivery Date
+            </h2>
+
+            <p class="mt-2 text-sm leading-6 text-gray-500">
+              Your package is estimated to be delivered to your
+              doorstep on or before 22nd of December, 2026.
+            </p>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+
+      <!-- FOOTER MPORTANT: OUTSIDE THE CHECKOUT GRID-->
+      <footer class="border-t border-gray-200 px-6 py-6 lg:px-10">
+
+        <div
+          class="flex flex-wrap items-center justify-center
+                 gap-x-6 gap-y-3 text-sm text-gray-600"
+        >
+
+          <a
+            href="#"
+            class="transition-colors hover:text-gray-900"
+          >
+            Refund Policy
+          </a>
+
+          <a
+            href="#"
+            class="transition-colors hover:text-gray-900"
+          >
+            Shipping Policy
+          </a>
+
+          <a
+            href="#"
+            class="transition-colors hover:text-gray-900"
+          >
+            Privacy Policy
+          </a>
+
+          <a
+            href="#"
+            class="transition-colors hover:text-gray-900"
+          >
+            Terms of Service
+          </a>
+
+          <a
+            href="#"
+            class="transition-colors hover:text-gray-900"
+          >
+            Contact Information
+          </a>
+
+        </div>
+
+
+        <!-- Copyright -->
+
+      </footer>
+
+    </section>
+
+  </div>
+
+</body>
+
+</html>
